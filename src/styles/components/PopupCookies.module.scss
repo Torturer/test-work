@@ -1,0 +1,70 @@
+.coockies_box {
+    width: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background: #fff;
+
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    bottom: 40px;
+}
+
+.coockies_info {
+    color: #333;
+    font-size: 16px;
+    line-height: 130%;
+
+    span {
+        color: rgba(133, 155, 166, 1);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.coockies_button {
+    display: flex;
+    width: 100px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    color: #859ba6;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid #859ba6;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #859ba6ad;
+        color: #859ba6ad;
+    }
+}
+
+@media (max-width: 768px) {
+    .coockies_box {
+        position: fixed;
+        width: 290px;
+        padding: 15px 20px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: -15px;
+    }
+
+    .coockies_info {
+        font-size: 12px;
+        line-height: 130%;
+        width: 160px;
+    }
+
+    .coockies_button {
+        width: 70px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
