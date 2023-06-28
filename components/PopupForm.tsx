@@ -58,6 +58,7 @@ const PopupForm = ({ popupHandler }: IProps): JSX.Element => {
                         width={22}
                         alt="Close buttom"
                         onClick={() => popupHandler(false)}
+                        priority
                     />
 
                     <h3 className={styles.head}>Залишайте заявку</h3>
@@ -70,7 +71,7 @@ const PopupForm = ({ popupHandler }: IProps): JSX.Element => {
                         onChange={e => setState(prevState => ({ ...prevState, name: e.target.value }))}
                     ></input>
                     <div className={styles.flag}>
-                        <Image src={flag} alt="Flag country" width={26} height={18} quality={100} />
+                        <Image src={flag} alt="Flag country" width={26} height={18} quality={100} priority/>
                         <InputMask
                             mask="+380-99-999-99-99"
                             className={`${styles.phone} ${state.phoneNumberError && styles.error}`}
